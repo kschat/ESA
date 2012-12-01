@@ -1,0 +1,209 @@
+/* Left navigation styles */
+
+#leftDivider {
+	position: fixed;
+	float: left;
+	top: 42px;
+	height: 85%;
+	min-height: 500px;
+	border-left: 1px solid #CCC;
+}
+
+#main-left {
+	position: absolute;
+	float: left;
+	height: 100%;
+	width: 0;
+	overflow: hidden;
+}
+
+#main-left-container {
+	position: fixed;
+	float: left;
+	top: 80px;
+	left: 0;
+	min-width: 220px;
+	width: 15%;
+	height: 100%;
+	background: #F0F0F0;
+	border: 1px solid #CCC;
+	border-left: 0;
+	padding-top: 10px;
+	padding-bottom: 23px;
+	
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	-moz-border-top-right-radius: 5px;
+	-moz-border-bottom-right-radius: 5px;
+}
+
+#leftNavContainer {
+	position: relative;
+	float: left;
+	width: 100%;
+}
+
+#leftNav:hover {
+	border: 1px solid #BDBDBD;
+	border-left: 0;
+}
+
+#leftNavContainer li {
+	float: left;
+	display: inline-block;
+	width: 100%;
+	background: #F0F0F0;
+	border-bottom: 1px solid #CCC;
+}
+
+#leftNavContainer li:nth-child(1) {
+	border-top: 1px solid #CCC;
+}
+
+#leftNavContainer li:hover {
+	background: #DFDFDF;
+}
+
+.firstLeftLink {
+	border-top-right-radius: 5px;
+}
+
+.selectedLeftLink {
+	background: #FFFFFF;
+	margin-right: -2px;
+}
+
+#leftNavContainer a:link, #leftNav a:visited {
+	color: #555;
+	display: block;
+	padding: 5px 10px;
+	text-decoration: none;
+	font-size: 16px;
+}
+
+#leftNavContainer a:hover , a:active {
+	color: #000000;
+}
+
+#signInContainer p {
+	font-size: 14px;
+}
+
+#sign-in-title p {
+	font-size: 24px;
+	text-align: center;
+	margin-bottom: 8px;
+}
+
+
+#signInContainer form label {
+	padding-left: 2px;
+	font-size: 18px;
+}
+
+#signInContainer form button span {
+	color: #555;
+}
+
+#signInContainer form input[type="submit"]:hover {
+	cursor: pointer;
+	border: 1px solid #BBB;
+}
+
+#signInContainer form input[type="submit"]:active {
+	border: 1px solid #DDD;
+	background: #F2F2F2;
+}
+
+.leftPanel {
+	padding: 0 5px;
+	margin-bottom: 10px;
+}
+
+.leftPanelMessage {
+	background: #F7F7F7;
+	border: 1px solid #909090;
+	padding: 4px;
+	margin-bottom: 12px;
+	
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+}
+
+.leftPanelMessage p {
+	text-align: center;
+	font-size: 18px;
+}
+
+.cp-button {
+	overflow: hidden;
+	display: block;
+	padding: 5px;
+	border: 1px solid transparent;
+	background-color: transparent;
+	
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+}
+
+#usersImage img {
+	float: left;
+	margin-right: 5px;
+	width: 40px;
+	height: 40px;
+}
+
+#cpButtonLabel {
+	display: block;
+	width: 100%;
+	padding-top: 10px;
+}
+#usersName {
+	float: left;
+}
+
+.cp-button:hover {
+	border: 1px solid #CCC;
+	cursor: pointer;
+	
+	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .1);
+	-moz-box-shadow: 0 1px 1px rgba(0, 0, 0, .1);
+}
+
+.cp-button:active {
+	border: 1px solid #B5B5B5;
+	
+	-webkit-box-shadow:inset 1px 1px 6px rgba(0, 0, 0, .1);
+	-moz-box-shadow:inset 1px 1px 6px rgba(0, 0, 0, .1);
+}
+
+#cpDownArrow {
+	float: right;
+	margin-top: 6px;
+}
+
+#searchInput {
+	color: #CCC;
+	padding: 4px 5px;
+	outline: none;
+	border: 1px solid #979797;
+	border-radius: 12px;
+	-moz-border-radius: 12px;
+}
+
+#searchInput:hover {
+	border: 1px solid #565656;
+}
+
+#searchInput:focus {
+	border: 1px solid #62BEFF;
+}
+
+#main-right {
+	position: fixed;
+	float: left;
+	top: 42px;
+	left: 180px;
+	width: 100%;
+	background-color: #F0F0F0;
+}
