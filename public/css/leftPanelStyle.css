@@ -40,7 +40,7 @@
 #leftNavContainer {
 	position: relative;
 	float: left;
-	width: 100%;
+	width: 220px;
 }
 
 #leftNav:hover {
@@ -69,7 +69,7 @@
 }
 
 .selectedLeftLink {
-	background: #FFFFFF;
+	background: #F7F7F7;
 	margin-right: -2px;
 }
 
