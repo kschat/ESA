@@ -23,7 +23,7 @@
 	top: 80px;
 	left: 0;
 	min-width: 220px;
-	width: 15%;
+	max-width: 15%;
 	height: 100%;
 	background: #F0F0F0;
 	border: 1px solid #CCC;

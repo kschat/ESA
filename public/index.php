@@ -14,7 +14,7 @@
 	include_once(TEMPLATES_PATH . '/adminSectionView.php');
 ?>
 		<div id="mainContentContainer" class="contentContainer">	
-			<?php 
+			<?php
 				include_once(TEMPLATES_PATH . '/leftPanel.php'); //TODO: convert to template 
 			?>
 			<!--<div class="center-toolbar">

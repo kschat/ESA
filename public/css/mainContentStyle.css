@@ -25,6 +25,7 @@
 .main-center-container {
 	position: relative;
 	padding-left: 20px;
+	max-width: 1300px;
 }
 
 .center-toolbar {
