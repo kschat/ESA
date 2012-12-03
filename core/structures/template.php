@@ -3,14 +3,20 @@
 class Template {
 	private $args;
 	private $file;
+	private $object;
 	
-	public function __construct($file, $args = array()) {
+	public function __construct($file, $object = '', $args = array()) {
 		$this->file = $file;
 		$this->args = $args;
+		$this->object = $object;
+
+		if(empty($this->object)) {
+			$this->object = $this->file;
+		}
 	}
-	
+
 	public function render() {
-		include TEMPLATES_PATH.'/'.$this->file;
+		include OBJECTS_PATH . DR . $this->object . DR . 'views' . DR . $this->file;
 	}
 	
 	public function __get($name) {

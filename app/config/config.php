@@ -67,17 +67,66 @@ error_reporting(E_ALL|E_STRCT);
 defined('DR')
 	or define('DR', DIRECTORY_SEPARATOR);
 
+
+/**
+ * App path and its subdirectories
+ */
+
+defined('APP_PATH')
+	or define('APP_PATH', realpath(dirname(__FILE__) . DR . '..'));
+
+defined('CONFIG_PATH')
+	or define('CONFIG_PATH', realpath(dirname(__FILE__)));
+
+defined('DOC_ROOT')
+	or define('DOC_ROOT', realpath(CONFIG_PATH . '..' . DR . '..' . DR . '..'));
+
+defined('PUBLIC_PATH')
+	or define('PUBLIC_PATH', realpath(APP_PATH . DR . 'public'));
+
+defined('OBJECTS_PATH')
+	or define('OBJECTS_PATH', realpath(APP_PATH . DR . 'objects'));
+
+defined('LAYOUTS_PATH')
+	or define('LAYOUTS_PATH', realpath(APP_PATH . DR . 'layouts'));
+
+
+
+
+
+
 defined('TEMPLATES_PATH')
-	or define('TEMPLATES_PATH', realpath(dirname(__FILE__) . '/templates'));
+	or define('TEMPLATES_PATH', realpath(CONFIG_PATH . '../public/templates'));
 	
 defined('LIBRARY_PATH')
-	or define('LIBRARY_PATH', realpath(dirname(__FILE__) . '/lib'));
+	or define('LIBRARY_PATH', realpath(DOC_ROOT . DR . 'lib'));
 	
 defined('CLASSES_PATH')
-	or define('CLASSES_PATH', realpath(dirname(__FILE__) . '/classes'));
+	or define('CLASSES_PATH', realpath(DOC_ROOT . DR . 'classes'));
+
+/** 
+ * Core path and its subdirectories
+ */
+defined('CORE_PATH')
+	or define('CORE_PATH', realpath(DOC_ROOT . DR . 'core'));
+
+defined('UTILS_PATH')
+	or define('UTILS_PATH', realpath(CORE_PATH . DR . 'utils'));
+
+defined('STRUCTURES_PATH')
+	or define('STRUCTURES_PATH', realpath(CORE_PATH . DR . 'structures'));
+
+defined('HELPERS_PATH')
+	or define('HELPERS_PATH', realpath(CORE_PATH . DR . 'helpers'));
+
+defined('DATASOURCES_PATH')
+	or define('DATASOURCES_PATH', realpath(CORE_PATH . DR . 'datasources'));
+
+defined('COMPONENTS_PATH')
+	or define('COMPONENTS_PATH', realpath(CORE_PATH . DR . 'components'));
 
 defined('SCRIPTS_PATH')
-	or define('SCRIPTS_PATH', realpath(dirname(__FILE__) . '/scripts'));
+	or define('SCRIPTS_PATH', realpath(dirname(__FILE__) . '../scripts'));
 
 defined('REQUESTED_PAGE')
 	or define('REQUESTED_PAGE', isset($_GET['page']) ? $_GET['page'] : 'home');
@@ -90,9 +139,6 @@ defined('REQUESTED_REDIRECT')
 
 defined('EDIT_REQUEST')
 	or define('EDIT_REQUEST', isset($_GET['edit']) ? $_GET['edit'] : false);
-
-defined('DOC_ROOT')
-	or define('DOC_ROOT', '/');
 
 defined('LOGIN_ERROR')
 	or define('LOGIN_ERROR', isset($_GET['loginError']) ? $_GET['loginError'] : false);

@@ -1,5 +1,5 @@
 <?php
-include_once('../config.php');
+//include_once('../config.php');
 
 function printArray($arr) {
 	echo '<pre>';
@@ -105,14 +105,22 @@ function parsePageName($p) {
 */
 function getPage($p) {
 	$temp = parsePageName($p);
-	$page = TEMPLATES_PATH . DR . $temp . '.php';
+	$page = OBJECTS_PATH . DR . $temp . DR . 'views' . DR . $temp . '.php';
 	
 	if(file_exists($page)) {
 		include($page);
 	}
 	else {
-		include(TEMPLATES_PATH . DR .'pageNotFound.php');
+		include(OBJECTS_PATH . DR . 'page-not-found' . DR . 'views' . DR . 'pageNotFound.php');
 	}
+}
+
+function getView($object, $view) {
+	$page = OBJECTS_PATH . DR . $object . DR . 'views' . DR . $view;
+	
+	//if(file_exists($page)) {
+		include($page);
+	//}
 }
 
 function formatImage($url) {

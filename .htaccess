@@ -2,6 +2,6 @@ Options +FollowSymLinks
 <IfModule mod_rewrite.c>
 	RewriteEngine On
 	
-	RewriteRule ^$ public/ [L]
-	RewriteRule (.*) public/$1 [L]
+	RewriteRule ^$ app/public/ [L]
+	RewriteRule (.*) app/public/$1 [L]
 </IfModule>
