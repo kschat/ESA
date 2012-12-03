@@ -64,69 +64,58 @@ $config = array(
 ini_set('error_reporting', 'true');
 error_reporting(E_ALL|E_STRCT);
 
-defined('DR')
-	or define('DR', DIRECTORY_SEPARATOR);
-
+defined('DS')
+	or define('DS', DIRECTORY_SEPARATOR);
 
 /**
  * App path and its subdirectories
  */
 
 defined('APP_PATH')
-	or define('APP_PATH', realpath(dirname(__FILE__) . DR . '..'));
+	or define('APP_PATH', realpath(dirname(__FILE__) . DS . '..'));
 
 defined('CONFIG_PATH')
 	or define('CONFIG_PATH', realpath(dirname(__FILE__)));
 
 defined('DOC_ROOT')
-	or define('DOC_ROOT', realpath(CONFIG_PATH . '..' . DR . '..' . DR . '..'));
+	or define('DOC_ROOT', realpath(CONFIG_PATH . '..' . DS . '..' . DS . '..'));
 
 defined('PUBLIC_PATH')
-	or define('PUBLIC_PATH', realpath(APP_PATH . DR . 'public'));
+	or define('PUBLIC_PATH', realpath(APP_PATH . DS . 'public'));
 
 defined('OBJECTS_PATH')
-	or define('OBJECTS_PATH', realpath(APP_PATH . DR . 'objects'));
+	or define('OBJECTS_PATH', realpath(APP_PATH . DS . 'objects'));
 
 defined('LAYOUTS_PATH')
-	or define('LAYOUTS_PATH', realpath(APP_PATH . DR . 'layouts'));
-
-
-
-
-
-
-defined('TEMPLATES_PATH')
-	or define('TEMPLATES_PATH', realpath(CONFIG_PATH . '../public/templates'));
-	
-defined('LIBRARY_PATH')
-	or define('LIBRARY_PATH', realpath(DOC_ROOT . DR . 'lib'));
-	
-defined('CLASSES_PATH')
-	or define('CLASSES_PATH', realpath(DOC_ROOT . DR . 'classes'));
+	or define('LAYOUTS_PATH', realpath(APP_PATH . DS . 'layouts'));
 
 /** 
  * Core path and its subdirectories
  */
 defined('CORE_PATH')
-	or define('CORE_PATH', realpath(DOC_ROOT . DR . 'core'));
+	or define('CORE_PATH', realpath(DOC_ROOT . DS . 'core'));
 
 defined('UTILS_PATH')
-	or define('UTILS_PATH', realpath(CORE_PATH . DR . 'utils'));
+	or define('UTILS_PATH', realpath(CORE_PATH . DS . 'utils'));
 
 defined('STRUCTURES_PATH')
-	or define('STRUCTURES_PATH', realpath(CORE_PATH . DR . 'structures'));
+	or define('STRUCTURES_PATH', realpath(CORE_PATH . DS . 'structures'));
 
 defined('HELPERS_PATH')
-	or define('HELPERS_PATH', realpath(CORE_PATH . DR . 'helpers'));
+	or define('HELPERS_PATH', realpath(CORE_PATH . DS . 'helpers'));
 
 defined('DATASOURCES_PATH')
-	or define('DATASOURCES_PATH', realpath(CORE_PATH . DR . 'datasources'));
+	or define('DATASOURCES_PATH', realpath(CORE_PATH . DS . 'datasources'));
 
 defined('COMPONENTS_PATH')
-	or define('COMPONENTS_PATH', realpath(CORE_PATH . DR . 'components'));
+	or define('COMPONENTS_PATH', realpath(CORE_PATH . DS . 'components'));
 
-defined('SCRIPTS_PATH')
-	or define('SCRIPTS_PATH', realpath(dirname(__FILE__) . '../scripts'));
+defined('LOGS_PATH')
+	or define('LOGS_PATH', realpath(APP_PATH . DS . 'logs'));
+
+/**
+* Page requests
+*/
 
 defined('REQUESTED_PAGE')
 	or define('REQUESTED_PAGE', isset($_GET['page']) ? $_GET['page'] : 'home');
