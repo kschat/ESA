@@ -2,20 +2,20 @@
 	session_start();
 	//session_destroy();
 	include_once('../config/config.php');
-	include_once(UTILS_PATH . DR . 'lib_functions.php');
-	include_once(UTILS_PATH . DR . 'DatabaseHandler.php');
-	include_once(STRUCTURES_PATH . DR . 'template.php');
+	include_once(UTILS_PATH . DS . 'lib_functions.php');
+	include_once(UTILS_PATH . DS . 'DatabaseHandler.php');
+	include_once(STRUCTURES_PATH . DS . 'template.php');
 	$databaseInfo = $config['databases']['ESA'];
 	$dbh = new DatabaseHandler($databaseInfo['database'], $databaseInfo['host'], $databaseInfo['username'], $databaseInfo['password']);
 	//include_once(SCRIPTS_PATH . '/redirect.php');
 
 	//TODO: convert to template
-	include_once(LAYOUTS_PATH . DR . 'header.php');
-	include_once(OBJECTS_PATH . DR . 'admin-section' . DR . 'views' . DR . 'adminSectionView.php');
+	include_once(LAYOUTS_PATH . DS . 'header.php');
+	include_once(OBJECTS_PATH . DS . 'admin-section' . DS . 'views' . DS . 'adminSectionView.php');
 ?>
 		<div id="mainContentContainer" class="contentContainer">	
 			<?php
-				include_once(OBJECTS_PATH . DR . 'left-panel' . DR . 'views' . DR . '/leftPanel.php'); //TODO: convert to template 
+				include_once(OBJECTS_PATH . DS . 'left-panel' . DS . 'views' . DS . '/leftPanel.php'); //TODO: convert to template 
 			?>
 			<!--<div class="center-toolbar">
 				<p>a</p>

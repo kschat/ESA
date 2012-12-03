@@ -105,18 +105,18 @@ function parsePageName($p) {
 */
 function getPage($p) {
 	$temp = parsePageName($p);
-	$page = OBJECTS_PATH . DR . $temp . DR . 'views' . DR . $temp . '.php';
+	$page = OBJECTS_PATH . DS . $temp . DS . 'views' . DS . $temp . '.php';
 	
 	if(file_exists($page)) {
 		include($page);
 	}
 	else {
-		include(OBJECTS_PATH . DR . 'page-not-found' . DR . 'views' . DR . 'pageNotFound.php');
+		include(OBJECTS_PATH . DS . 'page-not-found' . DS . 'views' . DS . 'pageNotFound.php');
 	}
 }
 
 function getView($object, $view) {
-	$page = OBJECTS_PATH . DR . $object . DR . 'views' . DR . $view;
+	$page = OBJECTS_PATH . DS . $object . DS . 'views' . DS . $view;
 	
 	//if(file_exists($page)) {
 		include($page);

@@ -16,7 +16,7 @@ class Template {
 	}
 
 	public function render() {
-		include OBJECTS_PATH . DR . $this->object . DR . 'views' . DR . $this->file;
+		include OBJECTS_PATH . DS . $this->object . DS . 'views' . DS . $this->file;
 	}
 	
 	public function __get($name) {
